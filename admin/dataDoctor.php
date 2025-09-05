@@ -66,7 +66,6 @@ $page = 'doctor';
                                         <th class="fw-semibold">Name Doctor</th>
                                         <th class="fw-semibold">Specialist</th>
                                         <th class="fw-semibold">Address</th>
-                                        <th class="fw-semibold">Email</th>
                                         <th class="text-center fw-semibold">Action</th>
                                     </tr>
                                 </thead>
@@ -84,13 +83,12 @@ $page = 'doctor';
                                             <td><?= $doctor['name_doctor'] ?></td>
                                             <td><?= $doctor['name_specialist'] ?></td>
                                             <td><?= $doctor['address_doctor'] ?></td>
-                                            <td><?= $doctor['email_doctor'] ?></td>
                                             <td class="text-center">
-                                                <a href="editDoctor.php?id=<?= $doctor['id_doctor'] ?>" class="btn btn-warning">Edit</a>
-                                                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal<?= $doctor['id_doctor'] ?>">
+                                                <a href="editDoctor.php?id=<?= $doctor['id_doctor'] ?>" class="btn btn-warning m-1">Edit</a>
+                                                <button type="button" class="btn btn-info m-1" data-bs-toggle="modal" data-bs-target="#modal<?= $doctor['id_doctor'] ?>">
                                                     View
                                                 </button>
-                                                <a onclick="return confirm('Are you sure delete this data ?')" href="deleteDoctor.php?id=<?= $doctor['id_doctor'] ?>" class="btn btn-danger">
+                                                <a onclick="return confirm('Are you sure delete this data ?')" href="deleteDoctor.php?id=<?= $doctor['id_doctor'] ?>" class="btn btn-danger m-1">
                                                     Delete</a>
                                             </td>
                                         </tr>
@@ -168,7 +166,7 @@ $page = 'doctor';
                 columnDefs: [{
                     "searchable": false,
                     "orderable": false,
-                    "targets": 5,
+                    "targets": 4,
                 }]
             });
         });

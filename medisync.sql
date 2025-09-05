@@ -248,14 +248,14 @@ INSERT INTO `tbl_pharmacist` (`id`, `id_hospital`, `id_patient`, `id_doctor`, `b
 CREATE TABLE `tbl_poly` (
   `id_poly` varchar(50) NOT NULL,
   `name_poly` varchar(50) NOT NULL,
-  `place_poly` varchar(10) NOT NULL
+  `desc_poly` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_poly`
 --
 
-INSERT INTO `tbl_poly` (`id_poly`, `name_poly`, `place_poly`) VALUES
+INSERT INTO `tbl_poly` (`id_poly`, `name_poly`, `desc_poly`) VALUES
 ('48519f64-c564-46e9-9cca-25e0b23cccdf', 'Pediatric Poly', '1'),
 ('6fc1516b-9381-4b20-a0c2-d517af138620', 'OBGYN Poly', '5'),
 ('900ff3ff-52dc-436e-9c5a-83425f37f722', 'General Poly', '2'),

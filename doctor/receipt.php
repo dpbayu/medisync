@@ -35,7 +35,7 @@ $page = 'medical_record';
         $sql = mysqli_query($db, "SELECT * FROM tbl_medical_record 
         INNER JOIN tbl_patient ON tbl_medical_record.id_patient = tbl_patient.id_patient
         INNER JOIN tbl_doctor ON tbl_medical_record.id_doctor = tbl_doctor.id_doctor
-        INNER JOIN tbl_poly ON tbl_medical_record.id_poly = tbl_poly.id_poly WHERE id_hospital = '$id'");
+        WHERE id_hospital = '$id'");
         $data = mysqli_fetch_array($sql);
         ?>
         <div class="pagetitle text-center">
@@ -44,7 +44,7 @@ $page = 'medical_record';
         <section class="section dashboard">
             <form action="function.php" method="POST">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-md-9 border border-2">
+                    <div class="col-md-12 border border-2">
                         <div class="d-flex justify-content-center p-3">
                             <img class="text-center" src="../assets/img/logo.png" alt="logo">
                         </div>

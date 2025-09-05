@@ -34,21 +34,13 @@ $page = 'medical_record';
             <div class="row">
                 <div class="col-md-12">
                     <form action="function.php" method="POST">
-                        <div class="form-group mb-3 d-none">
+                        <div class="form-group mb-3">
                             <label class="form-label" for="check_up_date">Check Up Date</label>
                             <input class="form-control" type="date" id="check_up_date" name="check_up" value="<?= date('Y-m-d') ?>">
                         </div>
-                        <div class="form-group mb-3 d-none">
+                        <div class="form-group mb-3">
                             <label class="form-label" for="doctor">Doctor</label>
                             <input class="form-control" type="text" id="name" name="id_doctor" value="<?php echo $_SESSION['id_doctor'] ?>">
-                        </div>
-                        <div class="form-group mb-3 d-none">
-                            <label class="form-label" for="specialist">Specialist</label>
-                            <input class="form-control" type="text" id="name" name="id_specialist" value="<?php echo $_SESSION['id_specialist'] ?>">
-                        </div>
-                        <div class="form-group mb-3 d-none">
-                            <label class="form-label" for="poly">Poly</label>
-                            <input class="form-control" type="text" id="name" name="id_poly" value="<?php echo $_SESSION['id_poly'] ?>">
                         </div>
                         <div class="d-flex gap-5">
                             <div class="form-group mb-3 col">

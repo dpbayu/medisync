@@ -57,7 +57,6 @@ $page = 'patient';
                                     <th class="fw-semibold">NIK</th>
                                     <th class="fw-semibold">Name Patient</th>
                                     <th class="fw-semibold">Gender</th>
-                                    <th class="fw-semibold">Address</th>
                                     <th class="fw-semibold">Age</th>
                                     <th class="text-center fw-semibold">Action</th>
                                 </tr>
@@ -81,8 +80,7 @@ $page = 'patient';
                                         <td><?= $patient['nik_patient'] ?></td>
                                         <td><?= $patient['name_patient'] ?></td>
                                         <td><?= $patient['gender_patient'] ?></td>
-                                        <td><?= $patient['address_patient'] ?></td>
-                                        <td><?= $year . " years " . $month . " month " ?></td>
+                                        <td><?= $year . " years " ?></td>
                                         <td class="text-center">
                                             <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal<?= $patient['id_patient'] ?>">
                                                 View
@@ -182,7 +180,7 @@ $page = 'patient';
                 columnDefs: [{
                     "searchable": false,
                     "orderable": false,
-                    "targets": 6,
+                    "targets": 5,
                 }]
             });
         });

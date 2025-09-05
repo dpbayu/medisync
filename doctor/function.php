@@ -21,11 +21,9 @@ if (isset($_POST['addMedicalRecord'])) {
     $id_patient = trim(mysqli_real_escape_string($db, $_POST['id_patient']));
     $illness = trim(mysqli_real_escape_string($db, $_POST['illness']));
     $id_doctor = trim(mysqli_real_escape_string($db, $_POST['id_doctor']));
-    $id_specialist = trim(mysqli_real_escape_string($db, $_POST['id_specialist']));
     $diagnosis = trim(mysqli_real_escape_string($db, $_POST['diagnosis']));
-    $id_poly = trim(mysqli_real_escape_string($db, $_POST['id_poly']));
     $check_up = trim(mysqli_real_escape_string($db, $_POST['check_up']));
-    mysqli_query($db, "INSERT INTO tbl_medical_record (id_hospital, id_patient, illness, id_doctor, id_specialist, diagnosis, id_poly, check_up) VALUES ('', '$id_patient', '$illness', '$id_doctor', '$id_specialist', '$diagnosis', '$id_poly', '$check_up')");
+    mysqli_query($db, "INSERT INTO tbl_medical_record (id_hospital, id_patient, illness, id_doctor, diagnosis, check_up) VALUES ('', '$id_patient', '$illness', '$id_doctor', '$diagnosis', '$check_up')");
     echo "<script>window.location='dataMedicalRecord.php?success=Data successfuly added!';</script>";
 }
 // Add Medical Record End

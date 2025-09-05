@@ -135,8 +135,8 @@ if (isset($_POST['addPoly'])) {
     for ($i = 1; $i <= $total ; $i++) { 
         $uuid = Uuid::uuid4()->toString();
         $name_poly = trim(mysqli_real_escape_string($db, $_POST['name_poly-'.$i]));
-        $place_poly = trim(mysqli_real_escape_string($db, $_POST['place_poly-'.$i]));        
-        $sql = mysqli_query($db, "INSERT INTO tbl_poly (id_poly, name_poly, place_poly) VALUES ('$uuid', '$name_poly', '$place_poly')");
+        $desc_poly = trim(mysqli_real_escape_string($db, $_POST['desc_poly-'.$i]));        
+        $sql = mysqli_query($db, "INSERT INTO tbl_poly (id_poly, name_poly, desc_poly) VALUES ('$uuid', '$name_poly', '$desc_poly')");
     }
     if ($sql) {
         echo "<script>window.location='dataPoly.php?success=".$total." Data successfully added!';</script>";
@@ -147,8 +147,8 @@ if (isset($_POST['addPoly'])) {
     for ($i = 0; $i < count($_POST['id']); $i++) { 
         $id = $_POST['id'][$i];
         $name_poly = $_POST['name_poly'][$i];
-        $place_poly = $_POST['place_poly'][$i];        
-        mysqli_query($db, "UPDATE tbl_poly SET name_poly = '$name_poly', place_poly = '$place_poly' WHERE id_poly = '$id'");
+        $desc_poly = $_POST['desc_poly'][$i];        
+        mysqli_query($db, "UPDATE tbl_poly SET name_poly = '$name_poly', desc_poly = '$desc_poly' WHERE id_poly = '$id'");
     }
     echo "<script>window.location='dataPoly.php?success=Data successfuly updated!';</script>";
 }

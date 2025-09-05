@@ -85,7 +85,7 @@ $page = 'patient';
                                     <td><?= $patient['nik_patient'] ?></td>
                                     <td><?= $patient['name_patient'] ?></td>
                                     <td><?= $patient['gender_patient'] ?></td>
-                                    <td><?= $year . " years " . $month . " month " ?></td>
+                                    <td><?= $year . " years " ?></td>
                                     <td class="text-center">
                                         <button type="button" class="btn btn-info" data-bs-toggle="modal"
                                             data-bs-target="#modal<?= $patient['id_patient'] ?>">

@@ -57,10 +57,7 @@ $page = 'medical_record';
                                         <th class="fw-semibold">No</th>
                                         <th class="fw-semibold">Date</th>
                                         <th class="fw-semibold">Patient</th>
-                                        <th class="fw-semibold">Diagnosis</th>
-                                        <th class="fw-semibold">Illness</th>
                                         <th class="fw-semibold">Doctor</th>
-                                        <th class="fw-semibold">Poly</th>
                                         <th class="fw-semibold">Medicine</th>
                                         <th class="fw-semibold text-center">Action</th>
                                     </tr>
@@ -71,26 +68,23 @@ $page = 'medical_record';
                                     $query_medical = "SELECT * FROM tbl_medical_record 
                                     INNER JOIN tbl_patient ON tbl_medical_record.id_patient = tbl_patient.id_patient
                                     INNER JOIN tbl_doctor ON tbl_medical_record.id_doctor = tbl_doctor.id_doctor
-                                    INNER JOIN tbl_poly ON tbl_medical_record.id_poly = tbl_poly.id_poly ORDER BY check_up DESC";
+                                    ORDER BY check_up DESC";
                                     $run_medical = mysqli_query($db, $query_medical);
                                     $i = 1;
                                     while ($data = mysqli_fetch_array($run_medical)) {
                                     ?>
                                         <tr>
                                             <td><?= $i++ ?></td>
-                                            <td><?= date("j F Y", strtotime($data['check_up'])) ?></td>
+                                            <td><?= date("j / m / Y", strtotime($data['check_up'])) ?></td>
                                             <td><?= $data['name_patient'] ?></td>
-                                            <td><?= $data['diagnosis'] ?></td>
-                                            <td><?= $data['illness'] ?></td>
                                             <td><?= $data['name_doctor'] ?></td>
-                                            <td><?= $data['name_poly'] ?></td>
                                             <td>
                                                 <?php
                                                 $sql_medicine = mysqli_query($db, "SELECT * FROM tbl_hospital_medicine 
                                                 JOIN tbl_medicine ON tbl_hospital_medicine.id_medicine = tbl_medicine.id_medicine 
                                                 WHERE id_hospital = '$data[id_hospital]'");
                                                 while ($data_medicine = mysqli_fetch_array($sql_medicine)) {
-                                                    echo $data_medicine['name_medicine'] . ' = ' . $data_medicine['qty_medicine'] . ' tablet ' . '<br>';
+                                                    echo $data_medicine['name_medicine'] . ' : ' . $data_medicine['qty_medicine'] . ' Packs ' . '<br>';
                                                 }
                                                 ?>
                                             </td>
@@ -202,11 +196,6 @@ $page = 'medical_record';
                                                                 <p class="mx-3">:</p>
                                                                 <p><?= $data['phone_doctor'] ?></p>
                                                             </div>
-                                                            <div class="d-flex">
-                                                                <label style="width: 125px;">Poly</label>
-                                                                <p class="mx-3">:</p>
-                                                                <p><?= $data['name_poly'] ?></p>
-                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
@@ -236,7 +225,7 @@ $page = 'medical_record';
                 columnDefs: [{
                     "searchable": false,
                     "orderable": false,
-                    "targets": 8,
+                    "targets": 5,
                 }]
             });
         });

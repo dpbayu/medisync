@@ -33,14 +33,14 @@ $page = 'poly';
             <a href="generatePoly.php" class="btn btn-primary">Add More</a>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <form action="function.php" method="POST">
                     <input type="hidden" name="total" value="<?= @$_POST['count_add'] ?>">
                     <table class="table">
                         <tr>
                             <th>#</th>
                             <th>Name Poly</th>
-                            <th>Floor</th>
+                            <th>Description</th>
                         </tr>
                         <?php
                         for ($i = 1; $i <= $_POST['count_add']; $i++) { 
@@ -48,7 +48,7 @@ $page = 'poly';
                         <tr>
                             <td><?= $i ?></td>
                             <td><input class="form-control" type="text" name="name_poly-<?= $i ?>" placeholder="Input poly" required></td>
-                            <td><input class="form-control" type="text" name="place_poly-<?= $i ?>" placeholder="Input floor" required></td>
+                            <td><input class="form-control" type="text" name="desc_poly-<?= $i ?>" placeholder="Input description" required></td>
                         </tr>
                         <?php
                         }

@@ -38,7 +38,7 @@ if (!isset($chk)) {
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <form action="function.php" method="POST">
                     <input type="hidden" name="total" value="<?= @$_POST['count_add'] ?>">
                     <table class="table">
@@ -46,7 +46,7 @@ if (!isset($chk)) {
                             <tr>
                                 <th>#</th>
                                 <th>Name Poly</th>
-                                <th>Floor</th>
+                                <th>Description</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -64,7 +64,7 @@ if (!isset($chk)) {
                                         class="form-control" required>
                                 </td>
                                 <td>
-                                    <input type="text" name="place_poly[]" value="<?= $data['place_poly'] ?>"
+                                    <input type="text" name="desc_poly[]" value="<?= $data['desc_poly'] ?>"
                                         class="form-control" required>
                                 </td>
                             </tr>

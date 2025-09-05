@@ -63,7 +63,6 @@ $page = 'doctor';
                                         <th class="fw-semibold">Name Doctor</th>
                                         <th class="fw-semibold">Specialist</th>
                                         <th class="fw-semibold">Address</th>
-                                        <th class="fw-semibold">Email</th>
                                         <th class="text-center fw-semibold">Action</th>
                                     </tr>
                                 </thead>
@@ -81,7 +80,6 @@ $page = 'doctor';
                                         <td><?= $doctor['name_doctor'] ?></td>
                                         <td><?= $doctor['name_specialist'] ?></td>
                                         <td><?= $doctor['address_doctor'] ?></td>
-                                        <td><?= $doctor['email_doctor'] ?></td>
                                         <td class="text-center">
                                             <button type="button" class="btn btn-info" data-bs-toggle="modal"
                                                 data-bs-target="#modal<?= $doctor['id_doctor'] ?>">
@@ -159,7 +157,7 @@ $page = 'doctor';
                 columnDefs: [{
                     "searchable": false,
                     "orderable": false,
-                    "targets": 5,
+                    "targets": 4,
                 }]
             });
         });

@@ -54,7 +54,7 @@ $page = 'pharmacist';
                                 ?>
                                     <tr>
                                         <td><?= $i++ ?></td>
-                                        <td><?= date("j F Y", strtotime($data['check_up'])) ?></td>
+                                        <td><?= date("j / m / Y", strtotime($data['check_up'])) ?></td>
                                         <td><?= $data['name_doctor'] ?></td>
                                         <td><?= $data['name_patient'] ?></td>
                                         <td><?= date("j F Y", strtotime($data['birth_date'])) ?></td>

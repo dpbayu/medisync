@@ -57,7 +57,7 @@ $page = 'dashboard';
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex gap-4 py-4 px-3">
-                                        <i class="fa fa-user-md rounded-circle fs-1 py-3 px-4 text-primary" style="background-color: rgba(54, 162, 235, 0.2);"></i></i>
+                                        <i class="bi bi-heart-pulse rounded-circle fs-1 py-1 px-3 text-primary" style="background-color: rgba(54, 162, 235, 0.2);"></i></i>
                                         <div class="d-block">
                                             <h2 class="fw-bolder">
                                                 <?php
@@ -67,7 +67,7 @@ $page = 'dashboard';
                                                     echo "$count";
                                                 ?>
                                             </h2>
-                                            <h6 class="text-secondary">Med Rec</h6>
+                                            <h6 class="text-secondary">MedRec</h6>
                                         </div>
                                     </div>
                                     <a href="../doctor/dataMedicalRecord.php" class="btn btn-primary w-100">Medical Record</a>

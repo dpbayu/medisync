@@ -53,7 +53,7 @@ $page = 'invoice';
                                 ?>
                                     <tr>
                                         <td><?= $i++ ?></td>
-                                        <td><?= date("j F Y", strtotime($data['check_up'])) ?></td>
+                                        <td><?= date("j / m / Y", strtotime($data['check_up'])) ?></td>
                                         <td><?= $data['name_doctor'] ?></td>
                                         <td><?= $data['total_medicine'] ?></td>
                                         <td><?= 'Rp ' . number_format($data['total_price'], 0, ',', '.') ?></td>

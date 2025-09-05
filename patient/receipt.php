@@ -40,7 +40,7 @@ $page = 'invoice';
         <section class="section dashboard">
             <form action="function.php" method="POST">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-md-9 border border-2">
+                    <div class="col-md-12 border border-2">
                         <div class="d-flex justify-content-center p-3">
                             <img class="text-center" src="../assets/img/logo.png" alt="logo">
                         </div>
@@ -57,7 +57,7 @@ $page = 'invoice';
                                 <div class="d-flex">
                                     <label style="width: 125px;">Date</label>
                                     <p class="mx-3">:</p>
-                                    <p><?= date("j F Y", strtotime($data['check_up'])) ?></p>
+                                    <p><?= date("j / m / Y", strtotime($data['check_up'])) ?></p>
                                 </div>
                             </div>
                         </div>

@@ -66,7 +66,7 @@ $page = 'poly';
                                     <tr>
                                         <td><?= $i; ?></td>
                                         <td><?= $poly['name_poly'] ?></td>
-                                        <td>Floor <?= $poly['place_poly'] ?></td>
+                                        <td>Floor <?= $poly['desc_poly'] ?></td>
                                     </tr>
                                     <?php $i++; ?>
                                     <?php endforeach; ?>

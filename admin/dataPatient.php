@@ -63,9 +63,8 @@ $page = 'patient';
                                 <tr>
                                     <th class="fw-semibold">No</th>
                                     <th class="fw-semibold">NIK</th>
-                                    <th class="fw-semibold">Name Patient</th>
+                                    <th class="fw-semibold">Name</th>
                                     <th class="fw-semibold">Gender</th>
-                                    <th class="fw-semibold">Address</th>
                                     <th class="fw-semibold">Age</th>
                                     <th class="text-center fw-semibold">Action</th>
                                 </tr>
@@ -84,21 +83,20 @@ $page = 'patient';
                                     $year = $selisih->y;
                                     $month = $selisih->m;
                                     ?>
-                                    <tr>
+                                    <tr class="text-center">
                                         <td><?= $i ?></td>
                                         <td><?= $patient['nik_patient'] ?></td>
                                         <td><?= $patient['name_patient'] ?></td>
                                         <td><?= $patient['gender_patient'] ?></td>
-                                        <td><?= $patient['address_patient'] ?></td>
-                                        <td><?= $year . " years " . $month . " month " ?></td>
-                                        <td class="text-center">
-                                            <a href="editPatient.php?id=<?= $patient['id_patient'] ?>" class="btn btn-warning">
+                                        <td><?= $year . " years " ?></td>
+                                        <td>
+                                            <a href="editPatient.php?id=<?= $patient['id_patient'] ?>" class="btn btn-warning m-1">
                                                 Edit
                                             </a>
-                                            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal<?= $patient['id_patient'] ?>">
+                                            <button type="button" class="btn btn-info m-1" data-bs-toggle="modal" data-bs-target="#modal<?= $patient['id_patient'] ?>">
                                                 View
                                             </button>
-                                            <a onclick="return confirm('Are you sure delete this data ?')" href="deletePatient.php?id=<?= $patient['id_patient'] ?>" class="btn btn-danger">
+                                            <a onclick="return confirm('Are you sure delete this data ?')" href="deletePatient.php?id=<?= $patient['id_patient'] ?>" class="btn btn-danger m-1">
                                                 Delete
                                             </a>
                                         </td>
@@ -197,7 +195,7 @@ $page = 'patient';
                 columnDefs: [{
                     "searchable": false,
                     "orderable": false,
-                    "targets": 6,
+                    "targets": 5,
                 }]
             });
         });
